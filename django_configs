@@ -124,3 +124,22 @@ sudo a2ensite   test.conf
 sudo chown :www-data ./project
 
 sudo service apache2 restart
+
+
+####################################### For Centos
+
+sudo yum install epel-release
+sudo yum install python-pip httpd mod_wsgi
+
+sudo nano /etc/httpd/conf.d/django.conf
+
+sudo usermod -a -G user apache
+chmod 710 /home/user
+
+sudo chown :apache ~/myproject/db.sqlite3
+sudo chown :apache ~/myproject
+sudo systemctl start httpd
+
+sudo systemctl enable httpd
+
+
