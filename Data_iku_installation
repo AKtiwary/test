@@ -1,0 +1,33 @@
+
+GNU/Linux Installation
+1. Download DSS
+
+wget https://downloads.dataiku.com/public/studio/4.2.0/dataiku-dss-4.2.0.tar.gz
+
+Or, use this direct link.
+DSS works on Ubuntu, Debian, CentOS, RHEL and Amazon Linux. For version details, please see our Requirements page.
+2. Unpack
+
+Unpack the downloaded archive where you want to install DSS.
+You must keep the directory even after installation is complete.
+
+tar xzf dataiku-dss-4.2.0.tar.gz
+
+3. Install
+
+Launch the installation script. You need to choose:
+
+    A directory where Dataiku DSS will store configuration and data.
+    A base TCP port.
+
+dataiku-dss-4.2.0/installer.sh -d DATA_DIR -p 11000
+
+4. Start
+
+DATA_DIR/bin/dss start
+
+5. Enter the studio
+
+Browse to http://<your server address>:11000.
+Only Chrome and Firefox are supported.
+For additional information, or any issue, please see our Learn section.
